@@ -1,0 +1,68 @@
+[
+  {
+    "id": "user-001",
+    "name": "Alice Johnson",
+    "email": "alice@example.com",
+    "department": "Engineering"
+  },
+  {
+    "id": "user-002",
+    "name": "Bob Smith",
+    "email": "bob@example.com",
+    "department": "Design"
+  },
+  {
+    "id": "user-003",
+    "name": "Carol Williams",
+    "email": "carol@example.com",
+    "department": "Product"
+  },
+  {
+    "id": "user-004",
+    "name": "David Brown",
+    "email": "david@example.com",
+    "department": "Engineering"
+  },
+  {
+    "id": "user-005",
+    "name": "Emma Davis",
+    "email": "emma@example.com",
+    "department": "Marketing"
+  },
+  {
+    "id": "user-006",
+    "name": "Frank Miller",
+    "email": "frank@example.com",
+    "department": "Sales"
+  },
+  {
+    "id": "user-007",
+    "name": "Grace Wilson",
+    "email": "grace@example.com",
+    "department": "Engineering"
+  },
+  {
+    "id": "user-008",
+    "name": "Henry Taylor",
+    "email": "henry@example.com",
+    "department": "Design"
+  },
+  {
+    "id": "user-009",
+    "name": "Ivy Anderson",
+    "email": "ivy@example.com",
+    "department": "Product"
+  },
+  {
+    "id": "user-010",
+    "name": "Jack Martinez",
+    "email": "jack@example.com",
+    "department": "Marketing"
+  },
+  {
+    "id": "user-011",
+    "name": "Rendy Faqot",
+    "email": "rendy.faqot",
+    "department": "Marketing"
+  }
+]

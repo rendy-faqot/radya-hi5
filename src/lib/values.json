@@ -1,0 +1,86 @@
+[
+  {
+    "id": "collaboration",
+    "name": "Collaboration",
+    "description": "Working effectively with others to achieve common goals",
+    "icon": "Users",
+    "color": "bg-purple-500"
+  },
+  {
+    "id": "innovation",
+    "name": "Innovation",
+    "description": "Bringing new ideas and creative solutions to the table",
+    "icon": "Lightbulb",
+    "color": "bg-yellow-500"
+  },
+  {
+    "id": "excellence",
+    "name": "Excellence",
+    "description": "Consistently delivering high-quality work and exceeding expectations",
+    "icon": "Award",
+    "color": "bg-amber-500"
+  },
+  {
+    "id": "leadership",
+    "name": "Leadership",
+    "description": "Guiding and inspiring others to achieve their best",
+    "icon": "Crown",
+    "color": "bg-orange-500"
+  },
+  {
+    "id": "empathy",
+    "name": "Empathy",
+    "description": "Understanding and sharing the feelings of others",
+    "icon": "Heart",
+    "color": "bg-rose-500"
+  },
+  {
+    "id": "reliability",
+    "name": "Reliability",
+    "description": "Being dependable and trustworthy in all situations",
+    "icon": "Shield",
+    "color": "bg-blue-500"
+  },
+  {
+    "id": "growth",
+    "name": "Growth",
+    "description": "Continuously learning, improving, and developing skills",
+    "icon": "TrendingUp",
+    "color": "bg-green-500"
+  },
+  {
+    "id": "courage",
+    "name": "Courage",
+    "description": "Taking bold actions and speaking up for what's right",
+    "icon": "Zap",
+    "color": "bg-red-500"
+  },
+  {
+    "id": "creativity",
+    "name": "Creativity",
+    "description": "Thinking outside the box and finding unique solutions",
+    "icon": "Sparkles",
+    "color": "bg-pink-500"
+  },
+  {
+    "id": "communication",
+    "name": "Communication",
+    "description": "Expressing ideas clearly and listening actively",
+    "icon": "MessageCircle",
+    "color": "bg-cyan-500"
+  },
+  {
+    "id": "positivity",
+    "name": "Positivity",
+    "description": "Bringing energy and optimism to every interaction",
+    "icon": "Sun",
+    "color": "bg-yellow-400"
+  },
+  {
+    "id": "integrity",
+    "name": "Integrity",
+    "description": "Doing the right thing, even when no one is watching",
+    "icon": "CheckCircle2",
+    "color": "bg-emerald-500"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "buildCommand": "bun run build",
+  "devCommand": "bun run dev",
+  "installCommand": "bun install",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "env": {
+    "NEXTAUTH_URL": {
+      "description": "The URL of your deployed application"
+    },
+    "NEXTAUTH_SECRET": {
+      "description": "A secret key used for encrypting session tokens. Generate with: openssl rand -base64 32"
+    },
+    "DATABASE_URL": {
+      "description": "PostgreSQL connection string from Neon, Supabase, or Railway"
+    },
+    "GOOGLE_CLIENT_ID": {
+      "description": "Google OAuth Client ID from Google Cloud Console"
+    },
+    "GOOGLE_CLIENT_SECRET": {
+      "description": "Google OAuth Client Secret from Google Cloud Console"
+    },
+    "RESEND_API_KEY": {
+      "description": "Resend API key for sending email notifications"
+    }
+  }
+}
