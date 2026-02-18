@@ -1,68 +1,60 @@
 [
-  {
-    "id": "user-001",
-    "name": "Alice Johnson",
-    "email": "alice@example.com",
-    "department": "Engineering"
-  },
-  {
-    "id": "user-002",
-    "name": "Bob Smith",
-    "email": "bob@example.com",
-    "department": "Design"
-  },
-  {
-    "id": "user-003",
-    "name": "Carol Williams",
-    "email": "carol@example.com",
-    "department": "Product"
-  },
-  {
-    "id": "user-004",
-    "name": "David Brown",
-    "email": "david@example.com",
-    "department": "Engineering"
-  },
-  {
-    "id": "user-005",
-    "name": "Emma Davis",
-    "email": "emma@example.com",
-    "department": "Marketing"
-  },
-  {
-    "id": "user-006",
-    "name": "Frank Miller",
-    "email": "frank@example.com",
-    "department": "Sales"
-  },
-  {
-    "id": "user-007",
-    "name": "Grace Wilson",
-    "email": "grace@example.com",
-    "department": "Engineering"
-  },
-  {
-    "id": "user-008",
-    "name": "Henry Taylor",
-    "email": "henry@example.com",
-    "department": "Design"
-  },
-  {
-    "id": "user-009",
-    "name": "Ivy Anderson",
-    "email": "ivy@example.com",
-    "department": "Product"
-  },
-  {
-    "id": "user-010",
-    "name": "Jack Martinez",
-    "email": "jack@example.com",
-    "department": "Marketing"
-  },
-  {
-    "id": "user-011",
-    "name": "Rendy Faqot",
-    "email": "rendy.faqot",
-    "department": "Marketing"
-  }
+  { "id": "RL01", "name": "Tito Daniswara", "email": "tito.daniswara" },
+  { "id": "RL02", "name": "Puja Pramudya", "email": "puja.pramudya" },
+  { "id": "RL03", "name": "Hari Bagus Firdaus", "email": "hari.bagus" },
+  { "id": "RL04", "name": "Aloysius Adrian", "email": "aloysius.adrian" },
+  { "id": "RL05", "name": "Lukky Setiaji", "email": "lukky.setiaji" },
+  { "id": "RL06", "name": "Rudi Hartono", "email": "rudi.hartono" },
+  { "id": "RL08", "name": "Nofriana Dwi Santosa", "email": "nofri.santosa" },
+  { "id": "RL09", "name": "Arik Achmad Efendy", "email": "arik.achmad" },
+  { "id": "RL10", "name": "Iwa Sugriwa", "email": "iwa.sugriwa" },
+  { "id": "RL11", "name": "Nurul Fitri", "email": "nurul.fitru" },
+  { "id": "RL12", "name": "Tri Cahyo Pangestu", "email": "tri.cahyo" },
+  { "id": "RL13", "name": "Teten Riswandi", "email": "teten.riswandi" },
+  { "id": "RL14", "name": "Nurfitriani", "email": "pipit" },
+  { "id": "RL15", "name": "Felix Hudi Priandika", "email": "felix.hudi" },
+  { "id": "RL16", "name": "Asep Saepul Rohmat", "email": "asep.saepul" },
+  { "id": "RL17", "name": "Irman Ramadhan", "email": "irman.ramadhan" },
+  { "id": "RL18", "name": "Dian Astriyani", "email": "dian.astriyani" },
+  { "id": "RL19", "name": "Triadi Wirawan", "email": "triadi.wirawan" },
+  { "id": "RL20", "name": "Ade Jaenudin", "email": "ade.jaenudin" },
+  { "id": "RL21", "name": "Nenden Anita Pransiska", "email": "nenden.anita" },
+  { "id": "RL22", "name": "Agung Ramadhan Aghnaddinar", "email": "agung.ramadhan" },
+  { "id": "RL23", "name": "Dwinda Pratama Putra Kuswara", "email": "dwinda.pratama" },
+  { "id": "RL24", "name": "Arif Madya Armanto", "email": "arifmadya" },
+  { "id": "RL25", "name": "Anggi Christian Lusambudi", "email": "anggi.christian" },
+  { "id": "RL27", "name": "Yudha Satria", "email": "yudha.staria" },
+  { "id": "RL28", "name": "Gilang Taufik Fahturohman", "email": "gilang.taufik" },
+  { "id": "RL29", "name": "Muhamad Andera Famuzia", "email": "andera.famuzia" },
+  { "id": "RL30", "name": "Insan Tiarawati", "email": "insan.tiara" },
+  { "id": "RL31", "name": "Iwan La Udin", "email": "iwan.laudin" },
+  { "id": "RL32", "name": "Fandi Maulana", "email": "fandi.maulana" },
+  { "id": "RL33", "name": "Alyssa Christella", "email": "alyssa.christella" },
+  { "id": "RL35", "name": "Abrar", "email": "abrar" },
+  { "id": "RL36", "name": "Nadhira Azzahra", "email": "nadhira.arandi" },
+  { "id": "RL41", "name": "Rendy Faqot", "email": "rendy.faqot" },
+  { "id": "RL42", "name": "Rachella Devika Farmis", "email": "rachella" },
+  { "id": "RL43", "name": "Riska Chintia", "email": "riska.chintia" },
+  { "id": "RL45", "name": "Elfrida Yuliyanti Putri", "email": "elfrida.putri" },
+  { "id": "AL02", "name": "Akhmad Alfan Hidayatullah", "email": "alfan.hidayatullah" },
+  { "id": "AL03", "name": "Riki Indramars Nurhakim", "email": "riki.indramars" },
+  { "id": "AL05", "name": "Hanif Fajri", "email": "hanif.fajri" },
+  { "id": "AL06", "name": "Andi Wira Pratama", "email": "wira.pratama" },
+  { "id": "AL07", "name": "Adnan Erlansyah", "email": "adnan.erlansyah" },
+  { "id": "AL08", "name": "Endjiansyah", "email": "endjiansyah" },
+  { "id": "AL09", "name": "Farid Fadilah Permana", "email": "farid.fadilah" },
+  { "id": "AL10", "name": "Hanif Akmaludin", "email": "hanif.akmaludin" },
+  { "id": "AL11", "name": "M. Maahir Maulana", "email": "maahir.maulana" },
+  { "id": "AL12", "name": "Raihan Fauzan", "email": "raihan.fauzan" },
+  { "id": "AL13", "name": "Permana Handi Yuda", "email": "permana.handi" },
+  { "id": "AL15", "name": "Angeli Fransiska Njo", "email": "angeli.njo" },
+  { "id": "AL17", "name": "Aprillia Miftakhun Nimah", "email": "aprillia.miftakhun" },
+  { "id": "AL18", "name": "Fadhila Irawan", "email": "fadhila.irawan" },
+  { "id": "AL19", "name": "Rizka Aprilia", "email": "rizka.aprilia" },
+  { "id": "AL20", "name": "Atika Irawan", "email": "atika.irawan" },
+  { "id": "AL21", "name": "Ali Masyhur", "email": "ali.masyhur" },
+  { "id": "AL22", "name": "Rommi Adany", "email": "rommy.adany" },
+  { "id": "AL23", "name": "Canra Sunara", "email": "canra.sunara" },
+  { "id": "AL24", "name": "Fajar Nurrohim Hassan", "email": "fajar.hasan" },
+  { "id": "AL25", "name": "Dede Aditia Mursalim", "email": "dede.aditia" }
 ]

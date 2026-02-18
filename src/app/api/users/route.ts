@@ -14,7 +14,7 @@ export async function GET(req: NextRequest) {
     // Exclude current user from the list
     const users = teamMembers.filter(
       (member) => member.email !== session.user.email
-    )
+    ).sort((a, b) => a.name.localeCompare(b.name));
 
     return NextResponse.json({ users })
   } catch (error) {

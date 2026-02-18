@@ -332,7 +332,7 @@ export default function Home() {
                 <div className="space-y-3">
                   <label className="text-sm font-medium flex items-center gap-2">
                     <Sparkles className="w-4 h-4" />
-                    Choose a Value
+                    Choose a (Radya) Value
                   </label>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                     {values.map((value) => {
