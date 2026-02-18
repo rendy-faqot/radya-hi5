@@ -39,6 +39,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [kudos, setKudos] = useState<any[]>([])
+  const [kudosLoading, setKudosLoading] = useState(true)
   const [showCelebration, setShowCelebration] = useState(false)
   const [activeTab, setActiveTab] = useState<'give' | 'received'>('give')
 
@@ -69,11 +70,14 @@ export default function Home() {
 
   const fetchKudos = async () => {
     try {
+      setKudosLoading(true)
       const response = await fetch('/api/kudos/list')
       const data = await response.json()
       setKudos(data.kudos || [])
     } catch (error) {
       console.error('Error fetching kudos:', error)
+    } finally {
+      setKudosLoading(false)
     }
   }
 
@@ -432,7 +436,17 @@ export default function Home() {
               <CardContent>
                 <ScrollArea className="h-[600px] pr-4">
                   <div className="space-y-4">
-                    {kudos.length === 0 ? (
+                    {kudosLoading ? (
+                      <div className="flex flex-col items-center justify-center py-12">
+                        <motion.div
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                        >
+                          <Sparkles className="w-8 h-8 text-blue-500 mb-4" />
+                        </motion.div>
+                        <p className="text-gray-500 text-sm">Loading recent hi5s...</p>
+                      </div>
+                    ) : kudos.length === 0 ? (
                       <div className="text-center py-12">
                         <motion.div
                           animate={{ y: [0, -10, 0] }}
