@@ -220,7 +220,7 @@ export default function Home() {
               </div>
               <div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  Radya Hi5
+                  Radya Hi5 - Built on Values. Driven by People.
                 </h1>
                 <p className="text-xs text-gray-500 dark:text-gray-400">Spread positivity</p>
               </div>

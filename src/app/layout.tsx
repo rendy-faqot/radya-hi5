@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Radya Hi5 - Team Recognition",
     description: "Spread positivity and recognize amazing work",
-    url: "https://chat.z.ai",
+    url: "https://highfive.radyalabs.com",
     siteName: "Radya Hi5",
     type: "website",
   },
