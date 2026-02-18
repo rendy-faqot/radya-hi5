@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   keywords: ["Radya Hi5", "recognition", "appreciation", "kudos", "team", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
   authors: [{ name: "Radya Team" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "https://radyalabs.com/favicon.ico",
   },
   openGraph: {
     title: "Radya Hi5 - Team Recognition",
