@@ -36,6 +36,7 @@ export default function Home() {
   const [selectedValue, setSelectedValue] = useState<string | null>(null)
   const [message, setMessage] = useState('')
   const [users, setUsers] = useState<any[]>([])
+  const [usersLoading, setUsersLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [kudos, setKudos] = useState<any[]>([])
@@ -60,11 +61,14 @@ export default function Home() {
 
   const fetchUsers = async () => {
     try {
+      setUsersLoading(true)
       const response = await fetch('/api/users')
       const data = await response.json()
       setUsers(data.users || [])
     } catch (error) {
       console.error('Error fetching users:', error)
+    } finally {
+      setUsersLoading(false)
     }
   }
 
@@ -297,7 +301,16 @@ export default function Home() {
                   </div>
                   <ScrollArea className="h-48 rounded-lg border">
                     <div className="p-2 space-y-2">
-                      {filteredUsers.length === 0 ? (
+                      {usersLoading ? (
+                        <div className="flex items-center justify-center py-8">
+                          <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                          >
+                            <Sparkles className="w-6 h-6 text-blue-500" />
+                          </motion.div>
+                        </div>
+                      ) : filteredUsers.length === 0 ? (
                         <p className="text-sm text-gray-500 text-center py-4">No users found</p>
                       ) : (
                         filteredUsers.map((user) => (
