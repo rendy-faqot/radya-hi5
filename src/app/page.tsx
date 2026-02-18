@@ -136,7 +136,7 @@ export default function Home() {
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
         >
-          <Sparkles className="w-8 h-8 text-purple-500" />
+          <Sparkles className="w-8 h-8 text-blue-500" />
         </motion.div>
       </div>
     )
@@ -149,7 +149,7 @@ export default function Home() {
   const selectedValueData = values.find((v) => v.id === selectedValue)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-green-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-blue-900/20">
       {/* Celebration Overlay */}
       <AnimatePresence>
         {showCelebration && (
@@ -211,15 +211,15 @@ export default function Home() {
               className="flex items-center gap-2"
             >
               <div className="relative">
-                <Heart className="w-8 h-8 text-purple-500 fill-purple-500" />
+                <Heart className="w-8 h-8 text-blue-500 fill-blue-500" />
                 <motion.div
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
-                  className="absolute inset-0 bg-purple-400/30 rounded-full blur-md"
+                  className="absolute inset-0 bg-blue-400/30 rounded-full blur-md"
                 />
               </div>
               <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
                   Radya Hi5 - Built on Values. Driven by People.
                 </h1>
                 <p className="text-xs text-gray-500 dark:text-gray-400">Spread positivity</p>
@@ -265,7 +265,7 @@ export default function Home() {
             <Card className="border-0 shadow-lg bg-white/80 dark:bg-gray-900/80 backdrop-blur">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Send className="w-5 h-5 text-purple-500" />
+                  <Send className="w-5 h-5 text-blue-500" />
                   Give Kudos
                 </CardTitle>
                 <CardDescription>Recognize someone for their amazing work!</CardDescription>
@@ -304,7 +304,7 @@ export default function Home() {
                             onClick={() => toggleRecipient(user.id)}
                             className={`w-full flex items-center gap-3 p-2 rounded-lg transition-all ${
                               selectedRecipients.includes(user.id)
-                                ? 'bg-purple-100 dark:bg-purple-900/30 border-2 border-purple-500'
+                                ? 'bg-blue-100 dark:bg-blue-900/30 border-2 border-blue-500'
                                 : 'hover:bg-gray-100 dark:hover:bg-gray-800'
                             }`}
                           >
@@ -317,7 +317,7 @@ export default function Home() {
                               <p className="text-xs text-gray-500">{user.email}</p>
                             </div>
                             {selectedRecipients.includes(user.id) && (
-                              <Check className="w-5 h-5 text-purple-600" />
+                              <Check className="w-5 h-5 text-blue-600" />
                             )}
                           </motion.button>
                         ))
@@ -390,7 +390,7 @@ export default function Home() {
                     !message.trim() ||
                     isSubmitting
                   }
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium"
+                  className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-blue-700 text-white font-medium"
                   size="lg"
                 >
                   {isSubmitting ? (
@@ -456,7 +456,7 @@ export default function Home() {
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="p-4 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border border-purple-100 dark:border-purple-900/30"
+                            className="p-4 rounded-xl bg-gradient-to-br from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 border border-blue-100 dark:border-blue-900/30"
                           >
                             <div className="flex items-start gap-3 mb-3">
                               <Avatar className="h-10 w-10">
@@ -472,7 +472,7 @@ export default function Home() {
                                   })}
                                 </p>
                               </div>
-                              <Badge className={`${valueData?.color || 'bg-purple-500'} text-white`}>
+                              <Badge className={`${valueData?.color || 'bg-blue-500'} text-white`}>
                                 <IconComponent className="w-3 h-3 mr-1" />
                                 {valueData?.name || kudo.value}
                               </Badge>

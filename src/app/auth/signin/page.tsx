@@ -8,7 +8,7 @@ import { Heart, Sparkles } from 'lucide-react'
 
 export default function SignInPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-green-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-blue-900/20 flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function SignInPage() {
               className="mx-auto relative"
             >
               <div className="relative">
-                <Heart className="w-16 h-16 text-purple-500 fill-purple-500 mx-auto" />
+                <Heart className="w-16 h-16 text-blue-500 fill-blue-500 mx-auto" />
                 <motion.div
                   animate={{
                     scale: [1, 1.2, 1],
@@ -35,13 +35,13 @@ export default function SignInPage() {
                     repeat: Infinity,
                     ease: 'easeInOut',
                   }}
-                  className="absolute inset-0 bg-purple-400/30 rounded-full blur-xl"
+                  className="absolute inset-0 bg-blue-400/30 rounded-full blur-xl"
                 />
               </div>
             </motion.div>
 
             <div>
-              <CardTitle className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <CardTitle className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
                 Welcome to Radya Hi5
               </CardTitle>
               <CardDescription className="text-base mt-2">
@@ -92,11 +92,11 @@ export default function SignInPage() {
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">By signing in, you agree to:</p>
               <ul className="text-xs text-gray-400 dark:text-gray-500 space-y-2 text-left">
                 <li className="flex items-start gap-2">
-                  <Sparkles className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                  <Sparkles className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
                   <span>Give meaningful recognition to your teammates</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Sparkles className="w-4 h-4 text-pink-500 mt-0.5 flex-shrink-0" />
+                  <Sparkles className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
                   <span>Celebrate the values that matter most</span>
                 </li>
                 <li className="flex items-start gap-2">

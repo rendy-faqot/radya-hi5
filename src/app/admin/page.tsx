@@ -60,12 +60,12 @@ export default function AdminPage() {
 
   if (status === 'loading' || loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-cyan-50 to-green-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-blue-900/20">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
         >
-          <BarChart3 className="w-8 h-8 text-purple-500" />
+          <BarChart3 className="w-8 h-8 text-blue-500" />
         </motion.div>
       </div>
     )
@@ -76,7 +76,7 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-green-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-blue-900/20">
       {/* Header */}
       <header className="sticky top-0 z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
         <div className="container mx-auto px-4 py-3">
@@ -90,7 +90,7 @@ export default function AdminPage() {
                 <ArrowLeft className="w-5 h-5" />
               </Button>
               <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
                   Radya Hi5 Dashboard
                 </h1>
                 <p className="text-xs text-gray-500 dark:text-gray-400">Hi5 analytics & insights</p>
@@ -126,11 +126,11 @@ export default function AdminPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-purple-500 to-purple-600 text-white">
+            <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-500 to-green-500 text-white">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-purple-100 text-sm mb-1">Total Kudos</p>
+                    <p className="text-blue-100 text-sm mb-1">Total Kudos</p>
                     <p className="text-3xl font-bold">{stats?.totalKudosOverall || 0}</p>
                   </div>
                   <Heart className="w-12 h-12 opacity-20" />
@@ -144,11 +144,11 @@ export default function AdminPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-pink-500 to-pink-600 text-white">
+            <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-500 to-green-500 text-white">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-pink-100 text-sm mb-1">This Week</p>
+                    <p className="text-blue-100 text-sm mb-1">This Week</p>
                     <p className="text-3xl font-bold">{stats?.totalKudosThisWeek || 0}</p>
                   </div>
                   <TrendingUp className="w-12 h-12 opacity-20" />
@@ -267,7 +267,7 @@ export default function AdminPage() {
             <Card className="border-0 shadow-lg bg-white/80 dark:bg-gray-900/80 backdrop-blur h-full">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Heart className="w-5 h-5 text-pink-500" />
+                  <Heart className="w-5 h-5 text-blue-500" />
                   Most Given Kudos
                 </CardTitle>
                 <CardDescription>Top 10 people who gave the most kudos</CardDescription>
@@ -284,10 +284,10 @@ export default function AdminPage() {
                           initial={{ opacity: 0, x: 20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.05 }}
-                          className="p-3 rounded-lg bg-gradient-to-r from-pink-50 to-rose-50 dark:from-pink-900/20 dark:to-rose-900/20 border border-pink-100 dark:border-pink-900/30"
+                          className="p-3 rounded-lg bg-gradient-to-r from-blue-50 to-rose-50 dark:from-blue-900/20 dark:to-rose-900/20 border border-blue-100 dark:border-blue-900/30"
                         >
                           <div className="flex items-center gap-3">
-                            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 text-white font-bold text-sm">
+                            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-rose-500 text-white font-bold text-sm">
                               {index + 1}
                             </div>
                             <Avatar className="h-10 w-10">
@@ -302,7 +302,7 @@ export default function AdminPage() {
                                     initial={{ width: 0 }}
                                     animate={{ width: `${(item.count / maxValue) * 100}%` }}
                                     transition={{ duration: 0.5, delay: index * 0.05 }}
-                                    className="h-full bg-gradient-to-r from-pink-400 to-rose-500 rounded-full"
+                                    className="h-full bg-gradient-to-r from-blue-400 to-rose-500 rounded-full"
                                   />
                                 </div>
                                 <span className="text-xs font-semibold text-gray-600 dark:text-gray-400 w-12 text-right">
@@ -330,7 +330,7 @@ export default function AdminPage() {
             <Card className="border-0 shadow-lg bg-white/80 dark:bg-gray-900/80 backdrop-blur">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Award className="w-5 h-5 text-purple-500" />
+                  <Award className="w-5 h-5 text-blue-500" />
                   Most Popular Values
                 </CardTitle>
                 <CardDescription>Top values being celebrated</CardDescription>
@@ -350,7 +350,7 @@ export default function AdminPage() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: index * 0.05 }}
-                        className={`p-4 rounded-xl bg-gradient-to-br ${valueData?.color || 'from-purple-500 to-purple-600'} text-white shadow-lg`}
+                        className={`p-4 rounded-xl bg-gradient-to-br ${valueData?.color || 'from-blue-500 to-green-500'} text-white shadow-lg`}
                       >
                         <div className="flex items-start justify-between mb-2">
                           <IconComponent className="w-6 h-6" />
