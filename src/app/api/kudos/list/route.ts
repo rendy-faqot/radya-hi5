@@ -16,9 +16,6 @@ export async function GET(req: NextRequest) {
     const offset = parseInt(searchParams.get('offset') || '0')
 
     const kudos = await db.kudos.findMany({
-      where: {
-        senderId: session.user.id,
-      },
       include: {
         sender: {
           select: {
@@ -51,11 +48,7 @@ export async function GET(req: NextRequest) {
       skip: offset,
     })
 
-    const total = await db.kudos.count({
-      where: {
-        senderId: session.user.id,
-      },
-    })
+    const total = await db.kudos.count()
 
     return NextResponse.json({ kudos, total })
   } catch (error) {
