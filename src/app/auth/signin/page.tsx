@@ -96,7 +96,7 @@ export default function SignInPage() {
                   <span>Give meaningful recognition to your teammates</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Sparkles className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                  <Sparkles className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
                   <span>Celebrate the values that matter most</span>
                 </li>
                 <li className="flex items-start gap-2">
