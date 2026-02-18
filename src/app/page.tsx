@@ -332,9 +332,9 @@ export default function Home() {
                 <div className="space-y-3">
                   <label className="text-sm font-medium flex items-center gap-2">
                     <Sparkles className="w-4 h-4" />
-                    Choose a (Radya) Value
+                    Choose a RADYA Value
                   </label>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
                     {values.map((value) => {
                       const IconComponent = (value.icon as any) ? getIcon(value.icon) : Award
                       return (
