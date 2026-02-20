@@ -381,6 +381,14 @@ export default function Home() {
                       {selectedValueData.description}
                     </motion.p>
                   )}
+                  <a
+                    href="https://docs.google.com/presentation/d/12e10WzRDxC_UEOWdopxAtFD6C9V9or0ouLN6X6HgszQ/edit?slide=id.p#slide=id.p"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-blue-500 hover:text-blue-600 hover:underline"
+                  >
+                    See more about Radya Values
+                  </a>
                 </div>
 
                 <Separator />
