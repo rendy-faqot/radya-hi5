@@ -256,7 +256,7 @@ function generateEmailTemplate(kudos: any, recipient: any, value: any) {
     .cta-button {
       display: inline-block;
       background: #1e293b;
-      color: white;
+      color: #ffffff !important;
       padding: 12px 24px;
       border-radius: 8px;
       text-decoration: none;
@@ -267,16 +267,15 @@ function generateEmailTemplate(kudos: any, recipient: any, value: any) {
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <div class="emoji">🎉</div>
+    <div class="header" style="text-align: center;">
+      <div class="emoji" style="font-size: 48px; margin-bottom: 16px; text-align: center;">🎉</div>
       <h1>You received a Hi5!</h1>
       <p class="subtitle">Keep up the amazing work!</p>
     </div>
 
     <div class="hi5-card">
       <div class="sender-info">
-        <div class="sender-avatar">👤</div>
-        <div class="sender-name">From: ${kudos.sender.name || 'Someone'}</div>
+        <div class="sender-name" style="font-weight: 600; font-size: 18px;">From: ${kudos.sender.name || 'Someone'}</div>
       </div>
 
       <div class="value-badge">
@@ -293,7 +292,7 @@ function generateEmailTemplate(kudos: any, recipient: any, value: any) {
     </div>
 
     <div style="text-align: center;">
-      <a href="${process.env.NEXTAUTH_URL || 'http://localhost:3000'}" class="cta-button">
+      <a href="${process.env.NEXTAUTH_URL || 'http://localhost:3000'}" class="cta-button" style="color: #ffffff !important; text-decoration: none;">
         View All Hi5s
       </a>
     </div>
