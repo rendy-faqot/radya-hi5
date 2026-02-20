@@ -4,9 +4,25 @@ import { authOptions } from '@/lib/auth'
 import { db } from '@/lib/db'
 import values from '@/lib/values.json'
 import teamMembers from '@/lib/team-members.json'
+import teamMemberEmails from '@/lib/team-members-email.json'
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
+
+interface TeamMemberEmail {
+  id: string
+  email: string
+}
+
+function getEmail(email: string, memberId: string): string {
+  if (email.includes('@')) {
+    return email
+  }
+  const memberEmail = (teamMemberEmails as TeamMemberEmail[]).find(
+    (tm) => tm.id === memberId
+  )
+  return memberEmail?.email || email
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -107,9 +123,10 @@ export async function POST(req: NextRequest) {
     try {
       for (const recipient of kudos.recipients) {
         if (recipient.user.email) {
+          const emailToSend = getEmail(recipient.user.email, recipient.user.teamMemberId || '')
           await resend.emails.send({
-            from: 'Radya Hi5 <hi5@yourdomain.com>',
-            to: recipient.user.email,
+            from: 'Radya Hi5 <hi5@radyalabs.id>',
+            to: emailToSend,
             subject: `🎉 You received a Hi5 from ${kudos.sender.name || 'someone'}!`,
             html: generateEmailTemplate(kudos, recipient.user, selectedValue),
           })
