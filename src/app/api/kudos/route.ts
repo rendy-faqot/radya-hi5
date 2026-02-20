@@ -63,27 +63,29 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid value' }, { status: 400 })
     }
 
-    // Find recipients from team members JSON
-    const selectedMembers = teamMembers.filter((member) =>
-      recipientIds.includes(member.id)
+    // Find recipients - check if from team-members.json or database
+    const teamMemberIds = (teamMembers as any[]).map((m) => m.id)
+    const jsonRecipientIds = recipientIds.filter((id) => teamMemberIds.includes(id))
+    const dbRecipientIds = recipientIds.filter((id) => !teamMemberIds.includes(id))
+
+    const selectedMembers = (teamMembers as any[]).filter((member) =>
+      jsonRecipientIds.includes(member.id)
     )
 
-    if (selectedMembers.length !== recipientIds.length) {
-      return NextResponse.json(
-        { error: 'Some recipients not found' },
-        { status: 400 }
-      )
-    }
+    const dbRecipients = await db.user.findMany({
+      where: { id: { in: dbRecipientIds } },
+    })
 
-    // Ensure users exist in database (create if not)
+    // Get user IDs
     const recipientUserIds: string[] = []
+
+    // Add users from team-members.json
     for (const member of selectedMembers) {
       let user = await db.user.findUnique({
         where: { email: member.email },
       })
 
       if (!user) {
-        // Create user if doesn't exist
         user = await db.user.create({
           data: {
             email: member.email,
@@ -97,12 +99,17 @@ export async function POST(req: NextRequest) {
       recipientUserIds.push(user.id)
     }
 
+    // Add users from database
+    for (const user of dbRecipients) {
+      recipientUserIds.push(user.id)
+    }
+
     // Create kudos
     const kudos = await db.kudos.create({
       data: {
         value: valueId,
         message: message.trim(),
-        senderId: session.user.id,
+        senderId: (session.user as any).id,
         recipients: {
           create: recipientUserIds.map((userId) => ({
             userId,
@@ -122,15 +129,18 @@ export async function POST(req: NextRequest) {
     // Send email notifications
     try {
       for (const recipient of kudos.recipients) {
-        if (recipient.user.email) {
-          const emailToSend = getEmail(recipient.user.email, recipient.user.teamMemberId || '')
-          await resend.emails.send({
-            from: 'Radya Hi5 <hi5@radyalabs.id>',
-            to: emailToSend,
-            subject: `🎉 You received a Hi5 from ${kudos.sender.name || 'someone'}!`,
-            html: generateEmailTemplate(kudos, recipient.user, selectedValue),
-          })
+        const emailToSend = getEmail(recipient.user.email, recipient.user.teamMemberId || '')
+        
+        if (!emailToSend.includes('@')) {
+          continue
         }
+        
+        await resend.emails.send({
+          from: 'Radya Hi5 <noreply@hi5.radyalabs.id>',
+          to: emailToSend,
+          subject: `🎉 You received a Hi5 from ${kudos.sender.name || 'someone'}!`,
+          html: generateEmailTemplate(kudos, recipient.user, selectedValue),
+        })
       }
 
       // Mark email as sent
