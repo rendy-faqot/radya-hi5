@@ -205,7 +205,7 @@ function generateEmailTemplate(kudos: any, recipient: any, value: any) {
       font-size: 16px;
     }
     .hi5-card {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
       border-radius: 12px;
       padding: 24px;
       margin: 24px 0;
