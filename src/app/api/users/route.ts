@@ -33,21 +33,28 @@ export async function GET(req: NextRequest) {
       },
     })
 
-    const usersWithoutTeamMemberId = dbUsers.filter((u) => !u.teamMemberId)
+    const dbUsersWithValidEmail = dbUsers.filter((u) => u.email && u.email.includes('@'))
 
-    const dbUserNames = new Set(dbUsers.map((u) => u.name?.toLowerCase()))
+    const normalizeName = (name: string | null | undefined) => name?.toLowerCase().trim().replace(/\s+/g, ' ')
+
+    const currentUserName = normalizeName(session.user.name)
+    const dbUserNames = new Set(dbUsersWithValidEmail.map((u) => normalizeName(u.name)))
+
+    if (currentUserName) {
+      dbUserNames.add(currentUserName)
+    }
 
     const remainingTeamMembers = (teamMembers as TeamMember[]).filter(
-      (tm) => !dbUserNames.has(tm.name.toLowerCase())
+      (tm) => !dbUserNames.has(normalizeName(tm.name))
     )
 
     const mergedUsers = [
-      ...usersWithoutTeamMemberId.map((dbUser) => ({
+      ...dbUsersWithValidEmail.map((dbUser) => ({
         id: dbUser.id,
         email: dbUser.email,
         name: dbUser.name,
         image: dbUser.image,
-        teamMemberId: null,
+        teamMemberId: dbUser.teamMemberId,
       })),
       ...remainingTeamMembers.map((tm) => ({
         id: tm.id,
